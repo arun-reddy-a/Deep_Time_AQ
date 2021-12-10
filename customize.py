@@ -1,14 +1,14 @@
 import os
 
 # Manually modify following parameters to customize the structure of your project
-path = os.path.abspath(os.path.dirname(__file__)).split("/")
-# print(path)
-REPO_HOME_PATH = "/".join(path[:-1])
-REPO_NAME = path[-1]
-PACKAGE_NAME = REPO_NAME
 AUTHOR = "Zeel B Patel"
 AUTHOR_EMAIL = "patel_zeel@iitgn.ac.in"
 description = "example description"
+
+path = os.path.abspath(os.path.dirname(__file__)).split("/")
+REPO_HOME_PATH = "/".join(path[:-1])
+REPO_NAME = path[-1]
+PACKAGE_NAME = REPO_NAME
 URL = "https://github.com/patel-zeel/" + REPO_NAME
 LICENSE = "MIT"
 LICENSE_FILE = "LICENSE"
