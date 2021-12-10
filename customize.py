@@ -71,6 +71,6 @@ with open(os.path.join(full_path, "requirements.txt"), "w") as f:
     if "setuptools_scm[toml]" not in data:
         f.write("\nsetuptools_scm[toml]\n")
     if "setuptools_scm_git_archive" not in data:
-        f.write("setuptools_scm_git_archive\n")
+        f.write("\nsetuptools_scm_git_archive\n")
 
 print("Successful")
