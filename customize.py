@@ -64,17 +64,6 @@ with open(os.path.join(full_path, "pyproject.toml"), "w") as f:
     f.write("[tool.setuptools_scm]\n")
     f.write(f'write_to = "{PACKAGE_NAME}/_version.py"')
 
-# Write requirements.txt
-with open(os.path.join(full_path, "requirements.txt"), "r") as f:
-    data = f.read()
-
-with open(os.path.join(full_path, "requirements.txt"), "w") as f:
-    f.write(data)
-    if "setuptools_scm[toml]" not in data:
-        f.write("\nsetuptools_scm[toml]\n")
-    if "setuptools_scm_git_archive" not in data:
-        f.write("\nsetuptools_scm_git_archive\n")
-
 # Initialize project folder
 os.makedirs(os.path.join(full_path , PACKAGE_NAME))
 with open(os.path.join(full_path, PACKAGE_NAME, "__init__.py"), "w") as f:
